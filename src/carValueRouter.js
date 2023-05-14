@@ -10,21 +10,35 @@ router.get("/carValueRouter", (req, res) => {
   res.json(data);
 });
 
+// // POST request for this endpoint
+// router.post("/carValueRouter", (req, res) => {
+//   console.log("/carValueRouter");
+//   const input1 = req.body.input1;
+//   const input2 = req.body.input2;
+
+//   // random function for testing API POST request
+//   function calculate(input1, input2) {
+//     const result = input1 * (input1 + input2) / input2;
+//     return result;
+//   }
+
+//   const result = calculate(input1, input2);
+//   res.json({ result: result });
+// });
+
 // POST request for this endpoint
 router.post("/carValueRouter", (req, res) => {
   console.log("/carValueRouter");
-  const input1 = req.body.input1;
-  const input2 = req.body.input2;
+  const model = req.body.input1;
+  const year = req.body.input2;
 
-  // random function for testing API POST request
-  function calculate(input1, input2) {
-    const result = input1 * (input1 + input2) / input2;
-    return result;
-  }
+  
+  
 
-  const result = calculate(input1, input2);
-  res.json({ result: result });
-});
+
+
+
+
 
 
 // exporting route

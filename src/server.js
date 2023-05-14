@@ -8,6 +8,8 @@ app.use(express.json());
 app.use(cors());
 require("dotenv").config();
 
+const validateModel = require("./validateModel");
+
  // Route Imports
  const carValueRouter = require("./carValueRouter");
  const riskRatingRouter = require("./riskRatingRouter");
