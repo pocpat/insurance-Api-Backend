@@ -1,8 +1,8 @@
 function validateModel(model) {
-    if (/^[a-zA-Z\s]+$/.test(model)) {
-      return model.replace(/\s+/g, '').toLowerCase();
-    } else {
-      return false;
-    }
+  if (model === '' || /^[0-9]+$/.test(model)) {
+    return { valid: false, message: 
+      "Model must be a non-empty string containing only letters, numbers, and spaces" };
   }
-  module.exports = validateModel;
+  return model.replace(/[^a-zA-Z]/g, '').toLowerCase();
+}
+module.exports = validateModel;

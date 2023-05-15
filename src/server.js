@@ -11,8 +11,8 @@ require("dotenv").config();
 const validateModel = require("./validateModel");
 
  // Route Imports
- const carValueRouter = require("./carValueRouter");
- const riskRatingRouter = require("./riskRatingRouter");
+ const carValueRouter = require("../routes/carValueRouter");
+ const riskRatingRouter = require("../routes/riskRatingRouter");
  // Routes
  app.use(carValueRouter);
   app.use(riskRatingRouter);

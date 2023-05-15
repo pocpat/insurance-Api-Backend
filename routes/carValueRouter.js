@@ -1,4 +1,5 @@
 const express = require("express");
+const calculateCarValue = require("../src/calculateCarValue");
 //using Express Router
 const router = express.Router();
 
@@ -8,6 +9,7 @@ router.get("/carValueRouter", (req, res) => {
   // res.send("Hello Car Value Page");
   const data = req.body;
   res.json(data);
+  res.send(calculateCarValue + '$');
 });
 
 // // POST request for this endpoint
@@ -29,9 +31,14 @@ router.get("/carValueRouter", (req, res) => {
 // POST request for this endpoint
 router.post("/carValueRouter", (req, res) => {
   console.log("/carValueRouter");
-  const model = req.body.input1;
-  const year = req.body.input2;
+  const model = req.body.inputmodel;
+  const year = req.body.inputyear;
+});
 
+// router.get("/carValueRouter", (req, res) => {
+//   console.log("/carValueRouter");
+//   res.send(calculateCarValue + '$');
+// });
   
   
 
