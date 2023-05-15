@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Value Calculator</title>
+  </head>
+  <body>
+    <h1>Car Value Calculator</h1>
+    <form id="carValueForm">
+      <label for="modelInput">Model:</label>
+      <input type="text" id="modelInput" name="model" required /><br /><br />
+      <label for="yearInput">Year:</label>
+      <input type="number" id="yearInput" name="year" required /><br /><br />
+      <input type="submit" value="Calculate" />
+    </form>
+    <p id="result"></p>
+
+    <script>
+      const form = document.getElementById("carValueForm");
+      const result = document.getElementById("result");
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const model = document.getElementById("modelInput").value;
+        const year = document.getElementById("yearInput").value;
+        const url = `/carValueRouter?model=${model}&year=${year}`;
+        console.log("Request URL:", url);
+        const response = await fetch(url);
+        const carValue = await response.text();
+        result.textContent = `Car value: ${carValue}`;
+      });
+    </script>
+  </body>
+</html>

@@ -14,7 +14,7 @@ function calculateCarValue(model, year) {
         modelValue += model.charCodeAt(i) - 96;
     }
     const carValue = modelValue * 100 + parseInt(year);
-    return carValue;
+    return (carValue + '$');
 }
 
 
