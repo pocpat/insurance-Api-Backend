@@ -1,41 +1,119 @@
-const validateYear = require('./validateYear');
+const validateYear = require('../src/validateYear');
 
 test("returns '2020' for year with 4 numbers",() =>{
-    expect(validateYear('2020')).toBe('2020')
+    //arrange
+    let year = '2020';
+    const expected = '2020';
+    //act
+    let result = validateYear(year);
+    //assert
+    expect(result).toBe(expected);
 });
 test("returns fale for empty input",() =>{
-    expect(validateYear('')).toBe(false)
+    //arrange
+    let year = '';
+    const expected = false;
+    //act
+    let result = validateYear(year);
+    //assert    
+    expect(result).toBe(expected);
 });
 test("returns false for year not between 1900-2023",() =>{
-    expect(validateYear('8739')).toBe(false)
+    //arrange
+    let year = '1899';
+    const expected = false;
+    //act
+    let result = validateYear(year);
+    //assert
+    expect(result).toBe(expected);
 });
 test("returns false for string with numbers",() =>{
-    expect(validateYear('toyota 798')).toBe(false)
+    //arrange
+    let year = 'toyota 798';
+    const expected = false;
+    //act
+    let result = validateYear(year);
+    //assert
+    expect(result).toBe(expected);
 });
 test("returns false for strings",() =>{
-    expect(validateYear('toyota mores')).toBe(false)
+    //arrange
+    let year = 'toyota';
+    const expected = false;
+    //act
+    let result = validateYear(year);
+    //assert
+    expect(result).toBe(expected);
 });
 test("returns false for numbers with string",() =>{
-    expect(validateYear('2085 toyota')).toBe(false)
+    //arrange
+    let year = '2085 toyota';
+    const expected = false;
+    //act
+    let result = validateYear(year);
+    //assert
+    expect(result).toBe(expected);
 });
 test(" returns false for numbers with string and space",() =>{
-    expect(validateYear('20toyota 798')).toBe(false)
+    //arrange
+    let year = '20toyota 798';
+    const expected = false;
+    //act
+    let result = validateYear(year);
+    //assert
+    expect(result).toBe(expected);
 });
 test("returns false for numbers with string no space",() =>{
-    expect(validateYear('1toyota1798')).toBe(false)
+//arrange
+let year = '1toyota1798';
+const expected = false;
+//act
+let result = validateYear(year);
+//assert
+expect(result).toBe(expected);
 });
 test(" returns '1999' for year  between 1900-2023",() =>{
-    expect(validateYear('1999')).toBe('1999')
+        //arrange
+        let year = '1999';
+        const expected = '1999';
+        //act
+        let result = validateYear(year);
+        //assert
+        expect(result).toBe(expected);
 });
 test(" returns '2005' for year  between 1900-2023",() =>{
-    expect(validateYear('2005')).toBe('2005')
+    //arrange
+    let year = '2005';
+    const expected = '2005';
+    //act
+    let result = validateYear(year);
+    //assert
+    expect(result).toBe(expected);
 });
 test("returns false for a string",() =>{
-    expect(validateYear('sabcd')).toBe(false)
+    //arrange
+    let year = 'two thousend and five';
+    const expected = false;
+    //act
+    let result = validateYear(year);
+    //assert
+    expect(result).toBe(expected);
 });
 test(" returns false for numbers length less then 4",() =>{
-    expect(validateYear('202')).toBe(false)
+        //arrange
+        let year = '202';
+        const expected = false;
+        //act
+        let result = validateYear(year);
+        //assert
+        expect(result).toBe(expected);
 });
 test(" returns false for numbers length more then 4",() =>{
-    expect(validateYear('20203')).toBe(false)
+    //arrange
+    let year = '20203';
+    const expected = false;
+    //act
+    let result = validateYear(year);
+    //assert
+    expect(result).toBe(expected);
 });
