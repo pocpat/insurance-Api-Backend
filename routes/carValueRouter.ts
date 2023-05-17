@@ -3,20 +3,25 @@ import calculateCarValue from "../src/calculateCarValue";
 import validateModel from "../src/validateModel";
 
 const router = express.Router();
-
+ let CarInfo=[{model:"toyota",year:2020,valid:true,message:"2020$"}];
 router.post("/carValueRouter", (req, res) => {
   console.log("/carValueRouter");
   const model = req.body.model;
   const year = req.body.year;
+  calculateCarValue(model, year);
+  CarInfo.push(calculateCarValue(model, year));
   res.send("Model and Year is " + model + " " + year);
+
 });
 
 router.get("/carValueRouter", (req, res) => {
   console.log("/carValueRouter");
 
   // Get the model and year query parameters from the request and defined
-  const model = req.query.model as string;
+const model = CarInfo.model as string;
   const year = parseInt(req.query.year as string);
+  // const model = req.query.model as string;
+  // const year = parseInt(req.query.year as string);
   console.log("model:", model);
   console.log("year:", year);
 

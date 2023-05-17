@@ -1,5 +1,4 @@
 import express from "express";
-import cors from "cors";
 //enable express
 const app = express();
 
@@ -9,7 +8,6 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 
 // Middlewares
 app.use(express.json());
-app.use(cors());
 require("dotenv").config();
 
 // Route Imports

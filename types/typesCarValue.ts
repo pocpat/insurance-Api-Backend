@@ -8,3 +8,9 @@ export interface ValidationResultYear {
   valid: boolean;
   year: number;
 }
+
+export interface CarInfo {
+  model: string;
+  year: number;
+  valid: boolean;
+}
