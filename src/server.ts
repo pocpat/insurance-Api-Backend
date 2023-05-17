@@ -5,14 +5,12 @@ const app = express();
 
 import path from "path";
 
-app.use(express.static(path.join(__dirname,'..', 'public')));
+app.use(express.static(path.join(__dirname, "..", "public")));
 
 // Middlewares
 app.use(express.json());
 app.use(cors());
 require("dotenv").config();
-
-import validateModel from "./validateModel";
 
 // Route Imports
 import carValueRouter from "../routes/carValueRouter";
@@ -29,6 +27,6 @@ app.get("/", (req, res) => {
 // start the server
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
- 
   console.log(`Server Connected! Listening at http://localhost:${PORT}`);
 });
+//
