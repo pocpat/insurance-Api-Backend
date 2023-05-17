@@ -1,4 +1,4 @@
-const validateModel = require("../src/validateModel");
+import validateModel from "../src/validateModel";
 
 test("returns 'toyota' for model with string", () => {
  //arrange
@@ -11,6 +11,17 @@ test("returns 'toyota' for model with string", () => {
   //assert
   expect(result).toStrictEqual(expected);
 });
+test("returns 'Mazda&' for model with string", () => {
+  //arrange
+  let model = "Mazda&";
+  const expected = { modelname: undefined, valid: false, message: "Model contains disallowed symbols" };
+  
+  //act
+  let result = validateModel(model);
+  
+  //assert
+  expect(result).toEqual(expected);
+ });
 
 test("returns false for empty input", () => {
 //arrange

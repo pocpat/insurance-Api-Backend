@@ -28,8 +28,7 @@ app.get("/", (req, res) => {
 
 // start the server
 const PORT = process.env.PORT || 4000;
-app.listen(PORT, (err) => {
-  if (err) {
-    console.log(err);
-  } else console.log(`Server Connected! Listening at http://localhost:${PORT}`);
+app.listen(PORT, () => {
+ 
+  console.log(`Server Connected! Listening at http://localhost:${PORT}`);
 });

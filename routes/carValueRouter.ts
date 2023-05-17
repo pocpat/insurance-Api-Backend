@@ -2,7 +2,7 @@ import express from "express";
 import calculateCarValue from "../src/calculateCarValue";
 import validateModel from "../src/validateModel";
 import validateYear from "../src/validateYear";
-import { ValidationResultModel, ValidationResultYear } from "../types/typesCarValue";
+// import { ValidationResultModel, ValidationResultYear } from "../types/typesCarValue";
 //using Express Router
 const router = express.Router();
 
@@ -38,10 +38,10 @@ router.get("/carValueRouter", (req, res) => {
   }
   
   const modelname = validationResult.modelname as string;
-  const carYear = validateYear(year);
- const carValue = calculateCarValue(modelname, carYear.year);
+  // const carYear = validateYear(year);
+ const carValue = calculateCarValue(modelname, year);
  console.log("carValue:", carValue);
- res.send (carValue) ;
+ res.send (carValue.message) ;
 });
 
 export default router;
