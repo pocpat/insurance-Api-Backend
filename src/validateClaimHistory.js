@@ -10,5 +10,6 @@ function validateClaimHistory(claimHistory) {
   }
   return true;
 }
+//just some nootes fro ger.
 
 module.exports = validateClaimHistory;
