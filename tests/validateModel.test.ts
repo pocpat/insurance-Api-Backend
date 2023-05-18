@@ -29,7 +29,7 @@ test("returns 'Mazda&' for model with string", () => {
 
 test("returns false for empty input", () => {
   //arrange
-  let model = "";
+  let model = " ";
   const expected = {
     valid: false,
     message:
