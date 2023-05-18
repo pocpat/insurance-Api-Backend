@@ -4,7 +4,7 @@ const app = express();
 
 import path from "path";
 
-app.use(express.static(path.join(__dirname, "..", "public")));
+// app.use(express.static(path.join(__dirname, "..", "public")));
 
 // Middlewares
 app.use(express.json());
