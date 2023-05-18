@@ -1,6 +1,6 @@
 import { ValidationResult } from "../types/typesCarValue";
-"../types/typesCarValue";
-function validateYear(year:number): ValidationResult{
+("../types/typesCarValue");
+function validateYear(year: number): ValidationResult {
   if (/^\d{4}$/.test(year.toString())) {
     const yearNumber = year;
     if (yearNumber >= 1900 && yearNumber <= 2023) {

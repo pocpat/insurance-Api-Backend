@@ -6,7 +6,7 @@ test("returns 2020 for year with 4 numbers", () => {
   const expected = {
     valid: true,
     year: year,
-  }
+  };
   //act
   let result = validateYear(year);
   //assert
@@ -31,7 +31,7 @@ test(" returns 1999 for year  between 1900-2023", () => {
   let year = 1899;
   const expected = {
     valid: false,
-    message: "Invalid year. Year must be between 1900-2023."
+    message: "Invalid year. Year must be between 1900-2023.",
   };
   //act
   let result = validateYear(year);
@@ -44,7 +44,7 @@ test(" returns 2005 for year  between 1900-2023", () => {
   const expected = {
     valid: true,
     year: year,
-  }
+  };
   //act
   let result = validateYear(year);
   //assert
@@ -56,7 +56,7 @@ test(" returns undefined for numbers length more then 4", () => {
   let year = 20203;
   const expected = {
     valid: false,
-    message: "Invalid year format."
+    message: "Invalid year format.",
   };
   //act
   let result = validateYear(year);

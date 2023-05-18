@@ -6,17 +6,27 @@ export interface ValidationResultModel {
 
 export interface ValidationResultYear {
   valid: boolean;
- year: number;
+  year: number;
   message?: string;
 }
 
-// export interface CarInfo {
-//   model:  string ;
-//   year: number ;
-//   valid: boolean;
-// }
+export interface CarInfo {
+  model: string;
+  year: number;
+  valid: boolean;
+}
 export interface ValidationResult {
   valid: boolean;
   year?: number;
   message?: string;
+}
+
+export interface QueryParams {
+  model?: string;
+  year?: number;
+}
+
+export interface CarInfoElement {
+  model: string;
+  year: number;
 }

@@ -1,14 +1,10 @@
 import express from "express";
-//enable express
 const app = express();
-
-import path from "path";
-
-// app.use(express.static(path.join(__dirname, "..", "public")));
+const router = express.Router();
+// import path from "path";
 
 // Middlewares
 app.use(express.json());
-require("dotenv").config();
 
 // Route Imports
 import carValueRouter from "../routes/carValueRouter";
@@ -22,6 +18,7 @@ app.get("/", (req, res) => {
   res.send("Hello Main Page :)");
 });
 
+app.use(router);
 // start the server
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
