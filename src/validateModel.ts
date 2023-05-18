@@ -2,7 +2,7 @@ import { ValidationResultModel } from "../types/typesCarValue";
 
 function validateModel(model: string): ValidationResultModel {
   if (
-    model === "" ||
+    model === " " ||
     !/^[a-zA-Z0-9 ]+$/.test(model) ||
     /^[0-9]+$/.test(model)
   ) {
