@@ -1,6 +1,6 @@
 import validateModel from "./validateModel";
 import validateYear from "./validateYear";
-import { ValidationResult } from "../types/typesCarValue";
+import { ValidationResult } from "../../types/typesCarValue";
 
 export function validateCarInfo(model: string, year: number): ValidationResult {
   const validationResultModel = validateModel(model);

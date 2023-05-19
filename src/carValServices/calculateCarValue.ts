@@ -8,6 +8,7 @@ interface ValidationResultValue {
   message: string | number;
 }
 
+// BUSINESS RULES FOR CALCULATING CAR VALUE
 function calculateCarValue(model: string, year: number): ValidationResultValue {
   if (!validateModel(model)) {
     return { valid: false, year: year, model: model, message: "Invalid model" };

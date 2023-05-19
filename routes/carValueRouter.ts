@@ -1,8 +1,8 @@
 import express from "express";
-import calculateCarValue from "../src/calculateCarValue";
-import validateModel from "../src/validateModel";
-import { validateCarInfo } from "../src/validateCarInfo";
-import { getQueryParams } from "../src/getQueryParams";
+import calculateCarValue from "../src/carValServices/calculateCarValue";
+import validateModel from "../src/carValServices/validateModel";
+import { validateCarInfo } from "../src/carValServices/validateCarInfo";
+import { getQueryParams } from "../src/carValServices/getQueryParams";
 import { CarInfoElement } from "../types/typesCarValue";
 
 const app = express();
