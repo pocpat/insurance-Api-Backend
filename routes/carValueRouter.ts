@@ -1,7 +1,7 @@
 import express from "express";
 import { CarInfoElement } from "../types/typesCarValue";
 import  postModelYearController  from "../controllers/postModelYearController";
-import getCarValueController  from "../controllers/postModelYearController";
+import getCarValueController  from "../controllers/getCarValueController";
 import {getQueryParams}  from "../src/carValServices/getQueryParams";
 import calculateCarValue from "../src/carValServices/calculateCarValue";
 import validateModel from "../src/carValServices/validateModel";
