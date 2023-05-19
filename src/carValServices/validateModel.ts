@@ -1,4 +1,4 @@
-import { ValidationResultModel } from "../types/typesCarValue";
+import { ValidationResultModel } from "../../types/typesCarValue";
 
 function validateModel(model: string): ValidationResultModel {
   if (
