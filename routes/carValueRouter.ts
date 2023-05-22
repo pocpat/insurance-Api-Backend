@@ -1,11 +1,8 @@
 import express from "express";
-import { CarInfoElement } from "../types/typesCarValue";
-import  postModelYearController  from "../controllers/postModelYearController";
-import getCarValueController  from "../controllers/getCarValueController";
-// const app = express();
-const router = express.Router();
+import postModelYearController from "../controllers/postModelYearController";
+import getCarValueController from "../controllers/getCarValueController";
 
-export let CarInfo: CarInfoElement[] = [];
+const router = express.Router();
 
 router.post("/carValueRouter", postModelYearController);
 router.get("/carValueRouter", getCarValueController);
