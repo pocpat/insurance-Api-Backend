@@ -10,7 +10,7 @@ app.use(express.json());
 import carValueRouter from "../routes/carValueRouter";
 //  import riskRatingRouter from "../routes/riskRatingRouter";
 // Routes
-app.use(carValueRouter);
+export default app.use(carValueRouter);
 //  app.use(riskRatingRouter);
 
 // =================GET=======================
@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 
 app.use(router);
 // start the server
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4001;
 app.listen(PORT, () => {
   console.log(`Server Connected! Listening at http://localhost:${PORT}`);
 });
