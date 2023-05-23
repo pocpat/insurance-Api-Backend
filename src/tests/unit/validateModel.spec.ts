@@ -1,4 +1,4 @@
-import validateModel from "../src/carValServices/validateModel";
+import validateModel from "../../../src/carValServices/validateModel";
 
 test("returns 'toyota' for model with string", () => {
   //arrange

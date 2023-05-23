@@ -1,8 +1,8 @@
-import postModelYearController from "../../controllers/postModelYearController";
+import postModelYearController from "../../../controllers/postModelYearController";
 import { getMockReq, getMockRes } from '@jest-mock/express'
 // import { CarInfo } from "../routes/carValueRouter";
-import { validateCarInfo } from "../../src/carValServices/validateCarInfo";
-import { carValueData } from "../../routes/carValueRouter";
+import { validateCarInfo } from "../../../src/carValServices/validateCarInfo";
+import { carValueData } from "../../carValServices/carValueData";
 import exp from "constants";
 
 describe("postModelYearController", () => {

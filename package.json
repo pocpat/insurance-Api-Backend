@@ -20,7 +20,7 @@
     "@types/node": "^20.1.5",
     "@types/supertest": "^2.0.12",
     "supertest": "^6.3.3",
-    "ts-jest": "^29.1.0",
+    "ts-jest": "^29.1.0"
  
   },
   "dependencies": {
