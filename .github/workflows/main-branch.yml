@@ -2,7 +2,10 @@ name: Build and Test
 on:
   push:
     branches:
-      - feature/*
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
   build_test:
     runs-on: ubuntu-latest
