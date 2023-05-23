@@ -1,4 +1,4 @@
 module.exports = {
-  testMatch: ["**/tests/*.test.ts"],
+  testMatch: ["**/tests/*/*.spec.ts"],
   preset: "ts-jest",
 };
