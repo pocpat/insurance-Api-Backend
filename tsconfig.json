@@ -12,5 +12,9 @@
     "$schema": "https://json.schemastore.org/tsconfig",
     "display": "Recommended",
     "include": ["src/**/*"],
+<<<<<<< HEAD
     "exclude": ["node_modules", "**/*/*.spec.ts","jest.config.js","./dist"]
+=======
+    "exclude": ["node_modules", "**/*/*.spec.ts"]
+>>>>>>> elena-ts
   }

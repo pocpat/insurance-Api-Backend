@@ -30,3 +30,7 @@ export interface CarInfoElement {
   model: string;
   year: number;
 }
+
+export interface CarValueData {
+  CarInfo: CarInfoElement[];
+}
