@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
       "target": "ES2015",
-      "outDir": "./dist",
+      "outDir": "./build",
+      "rootDir": "./src",
       "module": "commonjs",
       "moduleResolution": "node",
       "esModuleInterop": true,
@@ -12,6 +13,6 @@
     "$schema": "https://json.schemastore.org/tsconfig",
     "display": "Recommended",
     "include": ["src/**/*"],
-    "exclude": ["node_modules", "**/*/*.spec.ts","jest.config.js","./dist"]
+    "exclude": ["node_modules", "**/*/*.spec.ts","jest.config.js","./build"]
 
   }
