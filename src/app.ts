@@ -4,7 +4,7 @@ import riskRatingRouter from "./routes/riskRatingRouter";
 
 const app: Application = express();
 app.use(express.json());
-app.use("/car-value", router);
+app.use("/carValueRouter", router);
 app.use("/risk-rating", riskRatingRouter);
 
 app.use("/", (req: Request, res: Response, next: NextFunction): void => {
