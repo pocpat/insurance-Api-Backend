@@ -2,7 +2,7 @@ import request from "supertest";
 import express from "express";
 import app from "../../app";
 import { carValueData } from "../../carValServices/carValueData";
-import { CarInfoElement } from "../../../types/typesCarValue";
+import { CarInfoElement } from "../../types/typesCarValue";
 
 
 describe("Car Value routes API ", () => {

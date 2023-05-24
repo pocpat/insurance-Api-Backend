@@ -1,8 +1,6 @@
 import express from "express";
-// import { CarInfo } from "../routes/carValueRouter";
-import { carValueData } from "../src/carValServices/carValueData";
-import { validateCarInfo } from "../src/carValServices/validateCarInfo";
-// import { CarInfoElement } from "../types/typesCarValue";
+import { carValueData } from "../carValServices/carValueData";
+import { validateCarInfo } from "../carValServices/validateCarInfo";
 
 
 const  postModelYearController = (req: express.Request, res: express.Response) => {

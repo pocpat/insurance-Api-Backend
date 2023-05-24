@@ -1,5 +1,5 @@
 import express, { Application, Request, Response, NextFunction } from "express";
-import router from "../routes/carValueRouter";
+import router from "./routes/carValueRouter";
 
 const app: Application = express();
 app.use(express.json());

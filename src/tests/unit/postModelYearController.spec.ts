@@ -1,4 +1,4 @@
-import postModelYearController from "../../../controllers/postModelYearController";
+import postModelYearController from "../../controllers/postModelYearController";
 import { getMockReq, getMockRes } from '@jest-mock/express'
 import { carValueData } from "../../carValServices/carValueData";
 
