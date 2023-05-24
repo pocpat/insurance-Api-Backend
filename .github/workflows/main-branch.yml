@@ -4,8 +4,8 @@ on:
     branches:
       - main
 env:
-  PROJECT_ID: precise-bonus-387723 # TODO: update Google Cloud project id
-  SERVICE: mission4 # TODO: update Cloud Run service name
+  PROJECT_ID: mission-4-el-jin # TODO: update Google Cloud project id
+  SERVICE: mission4-el-jin # TODO: update Cloud Run service name
   REGION: australia-southeast2 # TODO: update Cloud Run service region
       
 jobs:
