@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build, Test and Deploy
 on:
   pull_request:
     branches:
@@ -9,7 +9,7 @@ env:
   REGION: australia-southeast2 # TODO: update Cloud Run service region
       
 jobs:
-  build_test:
+  build_test_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

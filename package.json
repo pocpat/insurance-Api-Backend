@@ -6,7 +6,7 @@
     "dev": "tsnd src/server.ts --respawn" ,
     "test": "jest",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "npm run build && node build/server.js"
   },
   "repository": {
     "type": "git",
