@@ -1,4 +1,4 @@
-import { ValidationResult } from "../../types/typesCarValue";
+import { ValidationResult } from "../types/typesCarValue";
 ("../types/typesCarValue");
 function validateYear(year: number): ValidationResult {
   if (/^\d{4}$/.test(year.toString())) {

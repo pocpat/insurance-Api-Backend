@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "server.ts",
   "scripts": {
-    "start": "tsnd src/server.ts",
+    "dev": "tsnd src/server.ts --respawn" ,
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "repository": {
     "type": "git",

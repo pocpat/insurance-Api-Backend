@@ -1,4 +1,4 @@
-import getCarValueController from "../../../controllers/getCarValueController";
+import getCarValueController from "../../controllers/getCarValueController";
 import { getMockReq, getMockRes } from '@jest-mock/express';
 import { carValueData } from "../../../src/carValServices/carValueData";
 describe("getCarValueController", () => {

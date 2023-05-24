@@ -1,11 +1,8 @@
 import request from "supertest";
 import express from "express";
 import app from "../../app";
-// import getCarValueController from "../../../controllers/getCarValueController";
 import { carValueData } from "../../carValServices/carValueData";
-// import { model } from "mongoose";
-// import { CarInfo } from "../../carValServices/carInfo";
-import { CarInfoElement } from "../../../types/typesCarValue";
+import { CarInfoElement } from "../../types/typesCarValue";
 
 
 describe("Car Value routes API ", () => {
