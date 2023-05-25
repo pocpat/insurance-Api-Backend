@@ -1,4 +1,4 @@
-import validateModel from "../src/validateModel";
+import validateModel from "../carValServices/validateModel";
 
 test("returns 'toyota' for model with string", () => {
   //arrange
@@ -116,4 +116,4 @@ test("returns false for disallowed symbols", () => {
   //assert
   expect(result).toEqual(expected);
 });
-// // Path: src\validateYear.js
+

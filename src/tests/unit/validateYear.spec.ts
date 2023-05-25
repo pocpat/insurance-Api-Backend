@@ -1,4 +1,4 @@
-import validateYear from "../src/validateYear";
+import validateYear from "../../../src/carValServices/validateYear";
 
 test("returns 2020 for year with 4 numbers", () => {
   //arrange
