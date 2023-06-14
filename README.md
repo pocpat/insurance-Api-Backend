@@ -16,11 +16,16 @@ This project was developed as part of Full-Stack Development studies and serves 
 
 # Installation and Usage
 
-Clone the repository:  ```consolegit clone https://github.com/pocpat/insuranceApiBackend ```
+Clone the repository:  ``` git clone https://github.com/pocpat/insuranceApiBackend ```
+
 cd <project_folder>
+
 npm run build
+
 npm install
+
 npm run start
+
 Since the task was backend only, there is no frontend involved. To access the car value calculation, make a POST request to the following endpoint: http://localhost:4000/carValueRouter.
 Use the following format for the request body:
 ```console
