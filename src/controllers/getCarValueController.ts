@@ -2,14 +2,26 @@ import express from "express";
 import calculateCarValue from "../carValServices/calculateCarValue";
 import validateModel from "../carValServices/validateModel";
 import { carValueData } from "../carValServices/carValueData";
-
+// import { model, year} from "../carValServices/getQueryParams"; 
+import { getQueryParams } from "../carValServices/getQueryParams";
 
 const getCarValueController = (req: express.Request, res: express.Response) => {
 
-  console.log("Data in carValueData:", carValueData);
-  const model = req.query.model;
-  const year = req.query.year;
-  console.log("model from get CNTRL:", model, "year from get CNTRL:", year);
+  console.log(" line 10 : Data in carValueData:", carValueData);
+// let model = carValueData.CarInfo[-1].model as string;
+// let year = carValueData.CarInfo[-1].year as number;
+
+
+  // const model = req.query.model;
+  // const year = req.query.year;
+
+  let model = carValueData.CarInfo[carValueData.CarInfo.length - 1].model as string;
+let year = carValueData.CarInfo[carValueData.CarInfo.length - 1].year as number;
+
+//   let model = carValueData.CarInfo[0].model as string;
+// let year = carValueData.CarInfo[0].year as number;
+
+  console.log(" line 17 : model from get CNTRL:", model, "year from get CNTRL:", year);
 
   if (model === undefined || year === undefined) {
     res.status(400).send("Invalid query parameters");
@@ -17,17 +29,17 @@ const getCarValueController = (req: express.Request, res: express.Response) => {
   }
 
   const validationResult = validateModel(model);
-  console.log("validationResult:", validationResult);
+  console.log("line 25: validationResult:", validationResult);
   if (!validationResult.valid) {
     res.status(400).send(validationResult.message);
     return;
   }
 
   const modelname = validationResult.modelname as string;
-  console.log("modelname:", modelname);
+  console.log("line 32 : modelname:", modelname);
   const carValue = calculateCarValue(modelname, year);
-  console.log("carValue:", carValue);
-  console.log("Sending response:", carValue.message);
+  console.log("line 34: carValue:", carValue);
+  console.log("line 35: Sending response:", carValue.message);
   res.status(200).send(carValue.message);
 
 };

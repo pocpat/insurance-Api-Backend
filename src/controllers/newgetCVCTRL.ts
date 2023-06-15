@@ -1,35 +1,39 @@
-import express from "express";
-import calculateCarValue from "../carValServices/calculateCarValue";
-import validateModel from "../carValServices/validateModel";
-import { carValueData } from "../carValServices/carValueData";
+// import express from "express";
+// import calculateCarValue from "../carValServices/calculateCarValue";
+// import validateModel from "../carValServices/validateModel";
+// import { carValueData } from "../carValServices/carValueData";
 
 
-const getCarValueController = (req: express.Request, res: express.Response) => {
+// const getCarValueController = (req: express.Request, res: express.Response) => {
 
-  console.log("Data in carValueData:", carValueData);
-  const model = carValueData.CarInfo.splice(0,carValueData.CarInfo.length - 1).model;
-  const year = carValueData.CarInfo.splice(0,carValueData.CarInfo.length - 1).year;
-  console.log("model from get CNTRL:", model, "year from get CNTRL:", year);
+//   console.log("new line 9: Data in carValueData:", carValueData);
+  
+//    let model = carValueData.CarInfo[carValueData.CarInfo.length - 1].model as string;
+// let year = carValueData.CarInfo[carValueData.CarInfo.length - 1].year as number;
+ 
+  
+  
+//   console.log("new line 18 : model from get CNTRL:", model, "year from get CNTRL:", year);
 
-  if (model === undefined || year === undefined) {
-    res.status(400).send("Invalid query parameters");
-    return;
-  }
+//   if (model === undefined || year === undefined) {
+//     res.status(400).send("Invalid query parameters");
+//     return;
+//   }
 
-  const validationResult = validateModel(model);
-  console.log("validationResult:", validationResult);
-  if (!validationResult.valid) {
-    res.status(400).send(validationResult.message);
-    return;
-  }
+//   const validationResult = validateModel(model);
+//   console.log("new line 26: validationResult:", validationResult);
+//   if (!validationResult.valid) {
+//     res.status(400).send(validationResult.message);
+//     return;
+//   }
 
-  const modelname = validationResult.modelname as string;
-  console.log("modelname:", modelname);
-  const carValue = calculateCarValue(modelname, year);
-  console.log("carValue:", carValue);
-  console.log("Sending response:", carValue.message);
-  res.status(200).send(carValue.message);
+//   const modelname = validationResult.modelname as string;
+//   console.log("new line 33: modelname:", modelname);
+//   const carValue = calculateCarValue(modelname, year);
+//   console.log("new line 35: carValue:", carValue);
+//   console.log("new line 36: Sending response:", carValue.message);
+//   res.status(200).send(carValue.message);
 
-};
-export default getCarValueController;
+// };
+// export default getCarValueController;
 

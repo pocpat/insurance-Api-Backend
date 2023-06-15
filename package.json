@@ -4,7 +4,7 @@
   "main": "server.ts",
   "scripts": {
     "dev": "tsnd src/server.ts --respawn" ,
-    "test": "jest",
+    "test": "jest --coverage",
     "build": "tsc",
     "start": "node build/server.js"
   },
