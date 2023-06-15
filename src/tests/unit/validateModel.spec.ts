@@ -116,4 +116,3 @@ test("returns false for disallowed symbols", () => {
   //assert
   expect(result).toEqual(expected);
 });
-
