@@ -26,7 +26,8 @@ npm install
 
 npm run start
 
-Since the task was backend only, there is no frontend involved. To access the car value calculation, make a POST request to the following endpoint: http://localhost:4000/carValueRouter.
+Since the task was backend only, there is no frontend involved. To access the car value calculation, make a POST request to the following endpoint:
+http://localhost:4000/carValueRouter.
 Use the following format for the request body:
 ```console
 {
