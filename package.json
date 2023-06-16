@@ -1,7 +1,7 @@
 {
   "name": "insuranceapibackend",
   "version": "1.0.0",
-  "main": "server.ts",
+  "main": "src/server.ts",
   "scripts": {
     "dev": "tsnd src/server.ts --respawn",
     "test": "jest --coverage",
