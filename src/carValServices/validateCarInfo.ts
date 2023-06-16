@@ -15,3 +15,4 @@ export function validateCarInfo(model: string, year: number): ValidationResult {
 
   return { valid: true };
 }
+
