@@ -12,6 +12,7 @@ const  postModelYearController = (req: express.Request, res: express.Response) =
         return;
     } else {
         carValueData.CarInfo.push({ model: model, year: year });
+        console.log("data store in carValueData:", carValueData);
         res.send("Model from posrMYC " + model + " and Year from posrMYC is " + year);
     }
     }

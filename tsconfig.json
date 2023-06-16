@@ -1,18 +1,18 @@
 {
-    "compilerOptions": {
-      "target": "ES2015",
-      "outDir": "./build",
-      "rootDir": "./src",
-      "module": "commonjs",
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "strict": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-    },
-    "$schema": "https://json.schemastore.org/tsconfig",
-    "display": "Recommended",
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "**/*/*.spec.ts","jest.config.js","./build"]
+  "compilerOptions": {
+    "target": "ES2015",
+    "outDir": "./build",
+    "rootDir": "./src",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+  },
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Recommended",
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*/*.spec.ts","jest.config.js","./build"]
 
-  }
+}

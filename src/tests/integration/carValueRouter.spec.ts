@@ -4,6 +4,7 @@ import app from "../../app";
 import { carValueData } from "../../carValServices/carValueData";
 import { CarInfoElement } from "../../types/typesCarValue";
 
+
 describe("Car Value routes API ", () => {
   test("Get value from the given model and year", async () => {
     //arrange
@@ -24,14 +25,10 @@ describe("Car Value POST API ", () => {
     const expectedElement = { model: "BMW", year: 2020 } as CarInfoElement;
 
     //act
-    const res = await request(app)
-      .post("/carValueRouter")
-      .send(expectedElement);
+    const res = await request(app).post("/carValueRouter").send(expectedElement);
 
     //assert
     expect(res.status).toEqual(200);
-    expect(carValueData.CarInfo[carValueData.CarInfo.length - 1]).toEqual(
-      expectedElement
-    );
+    expect(carValueData.CarInfo[carValueData.CarInfo.length-1]).toEqual(expectedElement);
   });
-});
+} );
