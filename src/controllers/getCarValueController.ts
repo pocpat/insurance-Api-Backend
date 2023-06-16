@@ -7,8 +7,10 @@ import { carValueData } from "../carValServices/carValueData";
 const getCarValueController = (req: express.Request, res: express.Response) => {
 
   console.log("Data in carValueData:", carValueData);
-  const model = carValueData.CarInfo[0].model;
-  const year = carValueData.CarInfo[0].year;
+  let model = carValueData.CarInfo[carValueData.CarInfo.length - 1]
+  .model as string;
+let year = carValueData.CarInfo[carValueData.CarInfo.length - 1]
+  .year as number;
   console.log("model from get CNTRL:", model, "year from get CNTRL:", year);
 
   if (model === undefined || year === undefined) {
