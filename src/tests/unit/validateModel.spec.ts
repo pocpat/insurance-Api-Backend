@@ -11,6 +11,7 @@ test("returns 'toyota' for model with string", () => {
   //assert
   expect(result).toStrictEqual(expected);
 });
+
 test("returns 'Mazda&' for model with string", () => {
   //arrange
   let model = "Mazda&";
