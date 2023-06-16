@@ -26,6 +26,7 @@
   "dependencies": {
     "babel-plugin-istanbul": "^6.1.1",
     "express": "^4.18.2",
+    "glob": "^10.2.7",
     "test-exclude": "^6.0.0"
   }
 }
