@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pocpat/insuranceApiBackend.git"
+    "url": "git+https://github.com/pocpat/insurance-Api-Backend.git"
   },
   "author": "EK",
   "license": "ISC",
